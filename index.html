@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>CURDS</title>
+</head>
+<body id ="body">
+    <div class="curd">
+        <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M384 64C490 64 576 149.1 576 256C576 362 490 448 384 448H192C85.96 448 0 362 0 256C0 149.1 85.96 64 192 64H384zM384 352C437 352 480 309 480 256C480 202.1 437 160 384 160C330.1 160 288 202.1 288 256C288 309 330.1 352 384 352z"/></svg>
+        <header class="head">
+            <h2>CURDS</h2>
+            <p>product managment system</p>
+        </header>
+        <section class="inputs">
+            <input type="text" id="title" placeholder="title">
+
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="create">create</button>
+
+        </section>
+
+        <section class="outputs">
+            <div class="search-container">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+                <div class="searchBtn">
+                    <button onclick="getSearchMood (this.id)" id="searchTitle">search by title</button>
+                    <button onclick="getSearchMood (this.id)" id="searchCategory">search by category</button>
+                </div>
+                <div id="deleteAllContainer">
+                </div>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+
+        </section>
+     
+        
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
